@@ -1,0 +1,14 @@
+<div class="liste">
+	<div *ngFor="let jeu of this.jeux" class="card" style="width: 18rem;">
+		<p>
+			sortie: {{jeu.dateSortie}}
+		</p>
+		<p>
+			nom : {{jeu.nomJeu}}
+		</p>
+		<p>
+			taille : {{jeu.taille}}
+		</p>
+		<button (click)="this.fetcher.deleteJeux(jeu.id).subscribe()">Supprimer</button>
+	</div>
+</div>
